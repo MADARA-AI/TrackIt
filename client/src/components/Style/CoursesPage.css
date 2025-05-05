@@ -1,0 +1,362 @@
+/* ===== Button Styles ===== */
+.filter-button,
+.course-button,
+.reset-button {
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(to bottom, #1b1c3f, #4a4e91); /* Gradient background */
+  color: white; /* White text color */
+  font-family: "Segoe UI", sans-serif; /* Stylish and legible font */
+  font-weight: bold;
+  font-size: 18px; /* Large font size */
+  border: none; /* No border */
+  border-radius: 30px; /* Rounded corners */
+  padding: 14px 28px; /* Large padding */
+  cursor: pointer; /* Cursor on hover */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  animation: button-shimmer 2s infinite;
+  transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+.filter-button:hover,
+.course-button:hover,
+.reset-button:hover {
+  background: linear-gradient(to bottom, #2c2f63, #5b67b7);
+  transform: translateY(-2px);
+}
+
+.filter-button:active,
+.course-button:active,
+.reset-button:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Animation for button shimmer effect */
+@keyframes button-shimmer {
+  0% {
+    background-position: left top;
+  }
+  50% {
+    background-position: right bottom;
+  }
+  100% {
+    background-position: left top;
+  }
+}
+
+/* ===== Course Card Styles ===== */
+.courses-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.courses-main {
+  margin-top: 30px;
+}
+
+.roadmap-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.category-section {
+  margin-bottom: 40px;
+}
+
+.category-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.category-header h3 {
+  font-size: 24px;
+  color: #1b1c3f;
+}
+
+.courses-count {
+  font-size: 16px;
+  color: #4a4e91;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.course-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  padding: 20px;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+}
+
+.detailed-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.course-image-container {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.course-image {
+  height: 120px;
+  width: 300px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.course-level {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+}
+
+.course-level.beginner {
+  background-color: #16a34a;
+}
+
+.course-level.intermediate {
+  background-color: #d97706;
+}
+
+.course-level.advanced {
+  background-color: #dc2626;
+}
+
+.course-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #1b1c3f;
+}
+
+.course-description {
+  font-size: 14px;
+  color: #4b5563;
+  margin-bottom: 15px;
+  flex-grow: 1;
+}
+
+.course-meta {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+  color: #4b5563;
+}
+
+.meta-item svg {
+  width: 16px;
+  height: 16px;
+}
+
+.course-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.course-rating,
+.course-students {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+}
+
+.star-icon {
+  width: 16px;
+  height: 16px;
+  color: #f59e0b;
+}
+
+/* ===== No Courses Found ===== */
+.no-courses {
+  text-align: center;
+  padding: 40px 20px;
+  background: #f8fafc;
+  border-radius: 12px;
+}
+
+.no-courses svg {
+  width: 48px;
+  height: 48px;
+  color: #64748b;
+  margin-bottom: 15px;
+}
+
+.no-courses p {
+  color: #475569;
+  margin-bottom: 20px;
+}
+
+.reset-button {
+  background-color: #4a4e91;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.reset-button:hover {
+  background-color: #2c2f63;
+}
+
+/* ===== Learning Paths Styles ===== */
+.learning-paths {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.learning-path-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.learning-path-card:hover {
+  transform: translateY(-5px);
+}
+
+.path-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.path-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.web-icon {
+  background-color: #e0e7ff;
+  color: #4f46e5;
+}
+
+.data-icon {
+  background-color: #e0f2fe;
+  color: #0369a1;
+}
+
+.mobile-icon {
+  background-color: #f0fdf4;
+  color: #16a34a;
+}
+
+.learning-path-card h4 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #1b1c3f;
+}
+
+.learning-path-card p {
+  font-size: 14px;
+  color: #4b5563;
+  margin-bottom: 15px;
+}
+
+.path-courses-count {
+  font-size: 13px;
+  color: #64748b;
+  margin-bottom: 15px;
+}
+
+.path-link {
+  display: inline-block;
+  color: #4a4e91;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.path-link:hover {
+  color: #2c2f63;
+}
+
+/* ===== Footer Styles ===== */
+.roadmap-footer {
+  margin-top: 60px;
+  padding: 20px 0;
+  border-top: 1px solid #e2e8f0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* ===== Responsive Styles ===== */
+@media (max-width: 960px) {
+  .header-content {
+    flex-wrap: wrap;
+  }
+
+  .search-container {
+    order: 3;
+    margin: var(--space-2) 0 0;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .courses-filters {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .filter-options {
+    width: 100%;
+  }
+
+  .learning-paths {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .courses-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .learning-paths {
+    grid-template-columns: 1fr;
+  }
+}
